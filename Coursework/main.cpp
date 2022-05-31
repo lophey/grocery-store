@@ -1,7 +1,10 @@
 ﻿#include <Windows.h>
+#include <iostream>
 #include <string>
 #include <conio.h>
-#include "shop_classes.h"
+
+#include "Food_shop.h"
+using namespace boost::gregorian;
 
 HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
 void ConsoleCursorVisible(bool show, short size)

@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{69d7f2b7-5416-4c88-ab82-f06d88f555fd}</ProjectGuid>
+    <ProjectGuid>{CF34C3B9-3A1F-4958-9645-C0E1E1549F77}</ProjectGuid>
     <RootNamespace>kyrsach</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>Coursework</ProjectName>
@@ -143,11 +143,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Food_goods.cpp" />
+    <ClCompile Include="Food_shop.cpp" />
+    <ClCompile Include="Goods.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="shop_classes.cpp" />
+    <ClCompile Include="Milk.cpp" />
+    <ClCompile Include="Shelf.cpp" />
+    <ClCompile Include="Yogurt.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="shop_classes.h" />
+    <ClInclude Include="Food_goods.h" />
+    <ClInclude Include="Food_shop.h" />
+    <ClInclude Include="Goods.h" />
+    <ClInclude Include="Milk.h" />
+    <ClInclude Include="Shelf.h" />
+    <ClInclude Include="Yogurt.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
