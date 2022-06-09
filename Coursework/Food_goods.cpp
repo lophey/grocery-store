@@ -2,15 +2,16 @@
 Food_goods::Food_goods()
 {
 	kcal = 0;
+
 }
 
 std::string Food_goods::Info() const {
 	std::ostringstream out;
-	out << kcal << " kcal" << std::endl << expiring_date;
+	out << kcal << " kcal\n";
 	return out.str();
 }
 
-std::string Food_goods::exp_date_checker() const {
+/*std::string Food_goods::exp_date_checker() const {
 	if (curr_time < expiring_date) {
 		return "Not expired yet";
 	}
@@ -20,4 +21,4 @@ std::string Food_goods::exp_date_checker() const {
 	if (curr_time == expiring_date) {
 		return "Today is the last day";
 	}
-}
+}*/

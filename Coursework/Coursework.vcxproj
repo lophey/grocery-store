@@ -143,18 +143,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FoodShop.cpp" />
     <ClCompile Include="Food_goods.cpp" />
-    <ClCompile Include="Food_shop.cpp" />
+    <ClCompile Include="FoodShopSystem.cpp" />
     <ClCompile Include="Goods.cpp" />
+    <ClCompile Include="Ketchup.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Milk.cpp" />
     <ClCompile Include="Shelf.cpp" />
     <ClCompile Include="Yogurt.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FoodShop.h" />
     <ClInclude Include="Food_goods.h" />
-    <ClInclude Include="Food_shop.h" />
+    <ClInclude Include="FoodShopSystem.h" />
     <ClInclude Include="Goods.h" />
+    <ClInclude Include="Ketchup.h" />
     <ClInclude Include="Milk.h" />
     <ClInclude Include="Shelf.h" />
     <ClInclude Include="Yogurt.h" />
