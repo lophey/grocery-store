@@ -14,6 +14,27 @@ Yogurt::Yogurt(std::string Name, boost::gregorian::date Reldate, boost::gregoria
 	filling = Yogfilling;
 	fat_content = Fatcont;
 	price = Price;
+	if (Reldate > Expdate) {
+		system("cls");
+		throw std::exception("Release date cannot be later than expiring date!");
+	}
+	if (Weight > 1000 || Weight < 1) {
+		system("cls");
+		throw std::exception("Weight of yogurt cannot be less than 1g or more than 1000g!");
+	}
+	if (Kcal > 1000 || Kcal < 1) {
+		system("cls");
+		throw std::exception("Kcal of yogurt cannot be less than 1 or more than 1000!");
+	}
+	if (Fatcont > 15 || Fatcont < 0) {
+		system("cls");
+		throw std::exception("Fat content of yogurt cannot be less than 0% or more than 15%!");
+	}
+	if (price < 0 || price == 0) {
+		system("cls");
+		throw std::exception("Price of yogurt cannot be less or equal 0 UAH!");
+	}
+
 }
 
 std::string Yogurt::Info() const {

@@ -31,7 +31,7 @@ void FoodShopSystem::menu() {
 					 "|1. Add Yogurt                       |\n"
 					 "|2. Add Milk                         |\n"
 					 "|3. Add Ketchup                      |\n"
-					 "|4. Set shelf size(30 - default)     |\n"
+					 "|4. Set shelf size(now - " << shelf.GetShelfSpace() << ")         |\n"
 					 "|5. Check on expired goods           |\n"
 					 "|6. Buy products                     |\n"
 					 "|7. Revenue                          |\n"
@@ -59,13 +59,12 @@ void FoodShopSystem::menu() {
 				std::cin >> yogfilling;
 				std::cout << "Enter yogurt fat content(%):\n";
 				std::cin >> fatcont;
-				std::cout << "Enter yogurt amount:\n";
+				std::cout << "Enter yogurt amount (overall shelf capacity: " << shelf.GetShelfSpace() << "): \n";
 				std::cin >> amount;
 				std::cout << "Enter yogurt price(UAH):\n";
 				std::cin >> price;
 				yogurt = new Yogurt(name, boost::gregorian::from_string(reldate), boost::gregorian::from_string(expdate), weight, kcal, yogfilling, fatcont, price);
 				shelf.AddFoodGoods(yogurt, amount);
-				shelf.GetFoodGoods();
 				std::cout    << "-----------------------------------------------\n"
 								"You added yogurt to the shelf in size of " << amount << "!\n"
 								"-----------------------------------------------\n";
@@ -134,7 +133,7 @@ void FoodShopSystem::menu() {
 				std::cin >> shelfspace;
 				shelf.SetShelfSpace(shelfspace);
 				std::cout    << "-----------------------------------------------\n"
-								"You have successfully set the shelf size of " << shelf.GetShelfSpace() << "!\n"
+								"You have successfully set shelf size of " << shelf.GetShelfSpace() << "!\n"
 								"-----------------------------------------------\n";
 				system("pause");
 				system("cls");

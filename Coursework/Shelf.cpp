@@ -24,3 +24,7 @@ void Shelf ::AddFoodGoods(const Food_goods* foodGoods, int amount) { //Добавляем
 void Shelf::AddFoodGoods(const Food_goods& foodGoods, int amount) {
 	AddFoodGoods(&foodGoods, amount);
 }
+void Shelf::SetShelfSpace(int ShelfSpace){
+	shelfSpace = ShelfSpace;
+	if (ShelfSpace > 99) { throw std::exception("Shelf size cannot be more than 99!"); }
+}

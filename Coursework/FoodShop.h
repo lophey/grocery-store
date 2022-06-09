@@ -10,11 +10,8 @@ public:
 	FoodShop();
 	void CheckExpiredGoods(const std::string Name);
 	void BuyGoods(const std::string& Name, int quantity);
-	void Revenue(int ProductPrice) {
-		revenue += ProductPrice;
-	}
+	void Revenue(int ProductPrice) { revenue += ProductPrice; }
 	int  GetRevenue() { return revenue; }
-	//void DeleteExpiredGoods(const std::string Name);
 protected:
 	int revenue;
 	std::vector<const Food_goods*> foodGoodsShelf;
