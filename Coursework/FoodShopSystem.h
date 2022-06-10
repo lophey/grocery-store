@@ -9,7 +9,7 @@
 class FoodShopSystem
 {
 public:
-	void menu();
+	void Menu();
 	void ConsoleCursorVisible(bool show, short size);
 };
 

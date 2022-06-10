@@ -12,7 +12,7 @@ void FoodShop::CheckExpiredGoods(const std::string Name) {
 		if (goods->GetName() == Name) {
 			if (curr_time > goods->GetExpDate()) {
 				i = foodGoodsShelf.erase(i);
-				std::cout << "Deleted!\n";
+				std::cout << "Expired! Deleted!\n";
 			}
 			if (curr_time < goods->GetExpDate()) { std::cout << "Not expired yet!\n"; i++; }
 			if (curr_time == goods->GetExpDate()) { std::cout << "Today is the last day!\n"; i++; }

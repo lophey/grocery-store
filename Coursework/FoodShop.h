@@ -17,4 +17,3 @@ protected:
 	std::vector<const Food_goods*> foodGoodsShelf;
 	boost::gregorian::date curr_time = boost::gregorian::day_clock::local_day();
 };
-

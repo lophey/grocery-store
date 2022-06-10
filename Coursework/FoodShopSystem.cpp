@@ -10,7 +10,7 @@ void FoodShopSystem::ConsoleCursorVisible(bool show, short size)
 	structCursorInfo.dwSize = size;
 	SetConsoleCursorInfo(hStdOut, &structCursorInfo);
 }
-void FoodShopSystem::menu() {
+void FoodShopSystem::Menu() {
 	char number;
 	char number1;
 	int amount, price, shelfspace, weight, kcal, fatcont, quantity;
@@ -23,7 +23,7 @@ void FoodShopSystem::menu() {
 	Ketchup *ketchup;
 	Shelf shelf;
 	system("title Grocery store");
-	ConsoleCursorVisible(true, 100);
+	ConsoleCursorVisible(false, 100);
 	do {
 		std::cout << "|------------------------------------|\n"
 					 "|           Grocery Store            |\n"
@@ -36,6 +36,7 @@ void FoodShopSystem::menu() {
 					 "|6. Buy products                     |\n"
 					 "|7. Revenue                          |\n"
 					 "|8. Show me products on the shelf    |\n"
+					 "|9. Sort products by type            |\n"
 					 "|------------------------------------|\n"
 					 "|0. Exit                             |\n"
 					 "|------------------------------------|\n";
@@ -195,6 +196,13 @@ void FoodShopSystem::menu() {
 				system("pause");
 				system("cls");
 				break;
+			case '9':
+				system("cls");
+				shelf.ShelfSort();
+				std::cout << "Products sorted by type!\n";
+				system("pause");
+				system("cls");
+				break;
 			case '0':
 				system("cls");
 				do {
@@ -234,23 +242,3 @@ void FoodShopSystem::menu() {
 		catch (const std::exception& ex) { std::cerr << ex.what() << "\n"; }
 	} while (number != 0);
 }
-
-/*void Food_shop::DeleteExpiredGoods(const std::string Name) { //Проверяем и удаляем товары с истекшим сроком годности
-	for (std::vector<const Food_goods*>::iterator i = foodGoodsShelf.begin(); i != foodGoodsShelf.end();) {
-		const Goods* goods = *i;
-		boost::gregorian::date expdt = goods->GetExpDate();
-		if (goods->GetName() == Name) {
-			if (curr_time > expdt) {
-				i = foodGoodsShelf.erase(i);
-			}
-			if (curr_time == expdt) {
-				std::cout << "Today is the last day\n";
-				i++;
-			}
-			if (goods->GetName() != Name) {
-				throw std::exception("No such product!");
-			}
-		}
-	}
-}*/
-

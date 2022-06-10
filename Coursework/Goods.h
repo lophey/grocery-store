@@ -5,6 +5,7 @@ class Goods {
 public:
 	int GetPrice() const { return price; }
 	std::string GetName() const { return name; }
+	virtual std::string Type() const = 0;
 protected:
 	Goods();
 	int price;

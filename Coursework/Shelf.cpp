@@ -28,3 +28,10 @@ void Shelf::SetShelfSpace(int ShelfSpace){
 	shelfSpace = ShelfSpace;
 	if (ShelfSpace > 99) { throw std::exception("Shelf size cannot be more than 99!"); }
 }
+bool compareByType(const Goods* good1, const Goods* good2) {
+	return good1->Type() > good2->Type() || (good1->Type() == good2->Type() && good1->GetName() > good2->GetName());
+}
+
+void Shelf::ShelfSort() {
+	std::sort(foodGoodsShelf.begin(), foodGoodsShelf.end(), compareByType);
+}

@@ -10,4 +10,3 @@ protected:
 	int kcal;
 	boost::gregorian::date expiring_date;
 };
-
